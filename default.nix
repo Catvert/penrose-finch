@@ -6,5 +6,6 @@ in
   with nixpkgs;
   stdenv.mkDerivation {
     name = "rust";
-    buildInputs = [ pkg-config rustup ruststable cmake zlib glib cairo pango ];
+    nativeBuildInputs = [pkgconfig python3];
+    buildInputs = [ rustup ruststable cmake zlib glib cairo pango ];
   }
